@@ -13,12 +13,6 @@ justify-content: flex-end;
 align-items: center;
 `;
 
-const StyledIcon = styled.div`
-&:hover {
-cursor: pointer;
-}
-`;
-
 const UserName = styled.div`
 margin: 10px 10px 0 0;
 font-size: 18px;
@@ -42,16 +36,12 @@ const ControlPanelContainer = ({ className }) => {
           :
           <>
             <UserName>{login}</UserName>
-            <StyledIcon>
-              <Icon id="fa-sign-out" margin="10px 0 0 0" onClick={() => dispatch(logOut(session))} />
-            </StyledIcon>
+            <Icon id="fa-sign-out" margin="10px 0 0 0" onClick={() => dispatch(logOut(session))} />
           </>}
 
       </RightAligned>
       <RightAligned>
-        <StyledIcon onClick={() => navigate(-1)}>
-          <Icon id="fa-backward" margin="10px 0 0 0" />
-        </StyledIcon>
+        <Icon id="fa-backward" margin="10px 0 0 0" onClick={() => navigate(-1)} />
         <Link to="post"><Icon id="fa-file-text-o" margin="10px 0 0 20px" /></Link>
         <Link to="users"><Icon id="fa-users" margin="10px 0 0 20px" /></Link>
       </RightAligned>
