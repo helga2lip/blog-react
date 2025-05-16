@@ -3,11 +3,13 @@ import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { server } from '../../bff'
 import { H2, Input, Button } from '../../components'
-import { useState } from 'react';
-import { Link } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
+import { useState, useEffect } from 'react';
+import { Link, Navigate } from 'react-router-dom'
+import { useDispatch, useSelector, useStore } from 'react-redux'
 import { setUser } from '../../actions'
+import { selectUserRole } from '../../selectors'
 import styled from 'styled-components';
+import { ROLE } from '../../constants'
 
 const authFormSchema = yup.object().shape({
   login: yup.string()
@@ -39,6 +41,7 @@ font-size: 18px;
 const AuthorizationContainer = ({ className }) => {
   const {
     register,
+    reset,
     handleSubmit,
     formState: { errors },
   } = useForm({
@@ -52,6 +55,21 @@ const AuthorizationContainer = ({ className }) => {
   const [serverError, setServerError] = useState(null);
 
   const dispatch = useDispatch();
+  const store = useStore();
+  const roleID = useSelector(selectUserRole);
+
+  useEffect(() => {
+    let currentWasLogout = store.getState().app.wasLogOut;
+
+    return store.subscribe(() => {
+      let previousWasLogOut = currentWasLogout;
+      currentWasLogout = store.getState().app.wasLogOut;
+
+      if (currentWasLogout !== previousWasLogOut) {
+        reset();
+      }
+    });
+  }, [reset, store]);
 
   const onSubmit = ({ login, password }) => {
     server.authorize(login, password).then(({ error, response }) => {
@@ -64,6 +82,10 @@ const AuthorizationContainer = ({ className }) => {
   }
   const formError = errors?.login?.message || errors?.password?.message;
   const errorMessage = formError || serverError;
+
+  if (roleID !== ROLE.GUEST) {
+    return <Navigate to="/" />
+  }
 
   return (
     <div className={className}>
