@@ -13,7 +13,7 @@ margin: 0 auto;
 background-color: #ffffff;
 `;
 
-const Content = styled.div`
+const Page = styled.div`
 padding: 120px 20px;
 `;
 
@@ -24,7 +24,7 @@ export function App() {
       <Appcolumn>
         <Header />
         <div>Hello</div>
-        <Content>
+        <Page>
           <Routes>
             <Route path="/" element={<div>Главная страница</div>} />
             <Route path="/login" element={<Authorization />} />
@@ -34,7 +34,7 @@ export function App() {
             <Route path="/post/:postID" element={<div>Статья</div>} />
             <Route path="*" element={<div>Ошибка</div>} />
           </Routes>
-        </Content>
+        </Page>
         <Footer />
       </Appcolumn>
     </>
