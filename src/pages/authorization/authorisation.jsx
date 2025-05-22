@@ -49,7 +49,7 @@ const AuthorizationContainer = ({ className }) => {
   const [serverError, setServerError] = useState(null);
 
   const dispatch = useDispatch();
-  const roleID = useSelector(selectUserRole);
+  const roleId = useSelector(selectUserRole);
 
   useResetForm(reset);
 
@@ -65,7 +65,7 @@ const AuthorizationContainer = ({ className }) => {
   const formError = errors?.login?.message || errors?.password?.message;
   const errorMessage = formError || serverError;
 
-  if (roleID !== ROLE.GUEST) {
+  if (roleId !== ROLE.GUEST) {
     return <Navigate to="/" />
   }
 

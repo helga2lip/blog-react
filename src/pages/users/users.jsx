@@ -15,24 +15,20 @@ const UsersContainer = ({ className }) => {
     Promise.all([
       requestServer('fetchRoles'),
       requestServer('fetchUsers')
-    ]).then(([usersResponse, rolesResponse]) => {
+    ]).then(([rolesResponse, usersResponse]) => {
+
       if (usersResponse.error || rolesResponse.error) {
         setErrorMessage(usersResponse.error || rolesResponse.error);
         return;
       }
 
-      setUsers(usersResponse);
-      setRoles(rolesResponse);
+      setUsers(usersResponse.response);
+      setRoles(rolesResponse.response);
     });
-    requestServer('fetchRoles').then(({ rolesError, reponse }) => {
-      if (rolesError) {
-        return
-      }
-      setRoles(reponse);
-    });
-
-    requestServer('fetchUsers');
   }, [requestServer])
+
+  console.log(users);
+
 
   return (
     <div className={className}>
@@ -45,7 +41,7 @@ const UsersContainer = ({ className }) => {
               <div className="registered-at-column">Дата регистрации</div>
               <div className="role-column">Роль</div>
             </TableRow>
-            {users.map(({ id, login, registeredAt, roleId: roleId }) => (
+            {users.map(({ id, login, registeredAt, roleId }) => (
               <UserRow key={id} login={login} registeredAt={registeredAt} roleId={roleId} roles={roles} />
             ))}
           </div>

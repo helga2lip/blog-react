@@ -4,28 +4,28 @@
       "id": "001",
       "login": "anton",
       "password": "qwerty123",
-      "registed_at": "2050-09-22",
+      "registered_at": "2050-09-22",
       "role_id": 0
     },
     {
       "id": "1da5",
       "login": "ivan",
       "password": "qwerty123",
-      "registed_at": "2059-12-22 22:23",
+      "registered_at": "2059-12-22 22:23",
       "role_id": 2
     },
     {
       "id": "0146",
       "login": "ivan2",
       "password": "qwerty123",
-      "registed_at": "2041-04-14 17:03",
+      "registered_at": "2041-04-14 17:03",
       "role_id": 2
     },
     {
       "id": "1211",
       "login": "vasya",
       "password": "qwerty123",
-      "registed_at": "2062-06-07 15:39",
+      "registered_at": "2062-06-07 15:39",
       "role_id": 2
     }
   ],
