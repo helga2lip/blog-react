@@ -1,4 +1,5 @@
 import { H2, Content } from "../../components";
+import { ROLE } from "../../constants";
 import { useServerRequest } from '../../hooks'
 import { TableRow, UserRow } from './components/';
 import { useEffect, useState } from "react";
@@ -27,9 +28,6 @@ const UsersContainer = ({ className }) => {
     });
   }, [requestServer])
 
-  console.log(users);
-
-
   return (
     <div className={className}>
       <Content error={errorMessage}>
@@ -42,7 +40,12 @@ const UsersContainer = ({ className }) => {
               <div className="role-column">Роль</div>
             </TableRow>
             {users.map(({ id, login, registeredAt, roleId }) => (
-              <UserRow key={id} login={login} registeredAt={registeredAt} roleId={roleId} roles={roles} />
+              <UserRow
+                key={id}
+                login={login}
+                registeredAt={registeredAt}
+                roleId={roleId}
+                roles={roles.filter(({ roleId }) => roleId !== ROLE.GUEST)} />
             ))}
           </div>
         </>
@@ -57,4 +60,5 @@ margin: 0 auto;
   align-items: center;
   flex-direction: column; 
   width: 570px; 
+  font-size: 18px;
 `;
