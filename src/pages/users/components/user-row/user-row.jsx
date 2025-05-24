@@ -4,7 +4,7 @@ import { useServerRequest } from '../../../../hooks'
 import styled from "styled-components";
 import { useState } from "react";
 
-const UserRowContainer = ({ className, login, id, registeredAt, roleId, roles }) => {
+const UserRowContainer = ({ className, login, id, registeredAt, roleId, roles, onUserRemove, }) => {
   const [selectedRoleId, setSelectedRoleId] = useState(roleId);
   const [initialRoleId, setInitialRoleId] = useState(roleId);
   const requestServer = useServerRequest();
@@ -41,7 +41,7 @@ const UserRowContainer = ({ className, login, id, registeredAt, roleId, roles })
           </div>
         </div>
       </TableRow>
-      <Icon id="fa-trash-o" margin="10px 0 0 0" onClick={() => { }} />
+      <Icon id="fa-trash-o" margin="10px 0 0 0" onClick={onUserRemove} />
     </div>
   );
 };
