@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import { Header, Footer } from './components'
-import { Authorization, Registration, Users } from './pages'
+import { Authorization, Registration, Users, Post } from './pages'
 import styled from 'styled-components'
 
 const Appcolumn = styled.div`
@@ -31,7 +31,7 @@ export function App() {
             <Route path="/register" element={<Registration />} />
             <Route path="/users" element={<Users />} />
             <Route path="/post" element={<div>Новая статья</div>} />
-            <Route path="/post/:postID" element={<div>Статья</div>} />
+            <Route path="/post/:id" element={<Post />} />
             <Route path="*" element={<div>Ошибка</div>} />
           </Routes>
         </Page>
