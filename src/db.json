@@ -90,6 +90,13 @@
       "password": "qwerty123",
       "registed_at": "2039-02-01 00:36",
       "role_id": 2
+    },
+    {
+      "id": "4827",
+      "login": "katya",
+      "password": "qwerty123",
+      "registed_at": "2046-03-01 20:42",
+      "role_id": 2
     }
   ],
   "roles": [
