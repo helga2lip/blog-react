@@ -2,6 +2,9 @@ import { Route, Routes } from 'react-router-dom'
 import { Header, Footer } from './components'
 import { Authorization, Registration, Users, Post } from './pages'
 import styled from 'styled-components'
+import { useDispatch } from 'react-redux'
+import { setUser } from './actions'
+import { useLayoutEffect } from 'react';
 
 const Appcolumn = styled.div`
 display: flex;
@@ -18,6 +21,20 @@ padding: 120px 20px 20px;
 `;
 
 export function App() {
+  const dispatch = useDispatch();
+
+  useLayoutEffect(() => {
+    const currentUserDataJSON = sessionStorage.getItem('userData')
+
+    if (!currentUserDataJSON) return;
+
+    const currentUserData = JSON.parse(currentUserDataJSON);
+
+    dispatch(setUser({
+      ...currentUserData,
+      roleId: Number(currentUserData.roleId)
+    }));
+  }, [dispatch]);
 
   return (
     <>

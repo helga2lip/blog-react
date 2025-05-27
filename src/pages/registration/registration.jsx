@@ -58,6 +58,7 @@ const RegistrationContainer = ({ className }) => {
         return;
       }
       dispatch(setUser(response));
+      sessionStorage.setItem('userData', JSON.stringify(response));
     })
   }
   const formError = errors?.login?.message || errors?.password?.message || errors?.passcheck?.message;
