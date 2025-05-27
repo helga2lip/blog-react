@@ -36,66 +36,10 @@
       "role_id": 2
     },
     {
-      "id": "acf6",
-      "login": "ivan4",
+      "id": "925f",
+      "login": "petya1",
       "password": "qwerty123",
-      "registed_at": "2044-03-01 01:51",
-      "role_id": 2
-    },
-    {
-      "id": "4291",
-      "login": "petya",
-      "password": "qwerty123",
-      "registed_at": "2039-11-25 18:30",
-      "role_id": 2
-    },
-    {
-      "id": "40af",
-      "login": "dima",
-      "password": "qwerty123",
-      "registed_at": "2058-06-16 16:53",
-      "role_id": 2
-    },
-    {
-      "id": "2f60",
-      "login": "dima2",
-      "password": "qwerty123",
-      "registed_at": "2061-08-20 03:22",
-      "role_id": 2
-    },
-    {
-      "id": "4ba1",
-      "login": "dima3",
-      "password": "qwerty123",
-      "registed_at": "2062-07-04 03:14",
-      "role_id": 2
-    },
-    {
-      "id": "963d",
-      "login": "dima4",
-      "password": "qwerty123",
-      "registed_at": "2046-07-20 05:37",
-      "role_id": 2
-    },
-    {
-      "id": "0e1e",
-      "login": "dima5",
-      "password": "qwerty123",
-      "registed_at": "2034-08-15 20:51",
-      "role_id": 2
-    },
-    {
-      "id": "d94b",
-      "login": "dima6",
-      "password": "qwerty123",
-      "registed_at": "2039-02-01 00:36",
-      "role_id": 2
-    },
-    {
-      "id": "4827",
-      "login": "katya",
-      "password": "qwerty123",
-      "registed_at": "2046-03-01 20:42",
+      "registed_at": "2034-12-07 11:23",
       "role_id": 2
     }
   ],
