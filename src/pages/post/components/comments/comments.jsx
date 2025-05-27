@@ -2,17 +2,28 @@ import { useState } from "react";
 import { Comment } from './components'
 import styled from "styled-components";
 import { Icon } from "../../../../components";
+import { selectUserId } from '../../../../selectors'
+import { useDispatch, useSelector } from "react-redux";
+import { useServerRequest } from '../../../../hooks'
+import { addCommentAsync } from '../../../../actions'
 
-const CommentsContainer = ({ className, comments }) => {
+const CommentsContainer = ({ className, comments, postId }) => {
   const [newComment, setNewComment] = useState('');
+  const userId = useSelector(selectUserId);
+  const dispatch = useDispatch();
+  const requestServer = useServerRequest();
+
+  const onNewCommentAdd = (userId, postId, content) => {
+    dispatch(addCommentAsync(requestServer, userId, postId, content))
+  }
 
   return <div className={className}>
     <div className="new-comment">
-      <textarea value={newComment} placeholder="Комментарий..." onChange={({ target }) => setNewComment(target.value)}></textarea>
+      <textarea name="comment" value={newComment} placeholder="Комментарий..." onChange={({ target }) => setNewComment(target.value)}></textarea>
       <Icon
         id="fa-paper-plane-o"
         margin="0 10px 0 0"
-        onClick={() => { }} />
+        onClick={() => onNewCommentAdd(userId, postId, newComment)} />
     </div>
     <div className="comments">
       {comments.map(({ id, author, content, publishedAt }) => {
