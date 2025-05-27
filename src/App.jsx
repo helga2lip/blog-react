@@ -14,7 +14,7 @@ background-color: #ffffff;
 `;
 
 const Page = styled.div`
-padding: 120px 20px;
+padding: 120px 20px 20px;
 `;
 
 export function App() {

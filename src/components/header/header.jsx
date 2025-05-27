@@ -23,4 +23,5 @@ width: 1000px;
 height: 120px;
 background-color: #ffffff;
 box-shadow: 0px 0px 16px #000000;
+z-index: 10;
 `;
