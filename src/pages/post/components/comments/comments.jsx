@@ -16,7 +16,6 @@ const CommentsContainer = ({ className, comments, postId }) => {
   const onNewCommentAdd = (userId, postId, content) => {
     dispatch(addCommentAsync(requestServer, userId, postId, content))
   }
-
   return <div className={className}>
     <div className="new-comment">
       <textarea name="comment" value={newComment} placeholder="Комментарий..." onChange={({ target }) => setNewComment(target.value)}></textarea>
@@ -27,7 +26,7 @@ const CommentsContainer = ({ className, comments, postId }) => {
     </div>
     <div className="comments">
       {comments.map(({ id, author, content, publishedAt }) => {
-        <Comment key={id} id={id} author={author} content={content} publishedAt={publishedAt} />
+        return <Comment key={id} id={id} author={author} content={content} publishedAt={publishedAt} />
       })}
     </div>
   </div >

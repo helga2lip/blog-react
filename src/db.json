@@ -41,6 +41,13 @@
       "password": "qwerty123",
       "registed_at": "2034-12-07 11:23",
       "role_id": 2
+    },
+    {
+      "id": "c3b3",
+      "login": "katya",
+      "password": "qwerty123",
+      "registed_at": "2043-11-14 08:18",
+      "role_id": 2
     }
   ],
   "roles": [
@@ -98,5 +105,72 @@
       "published_at": "2045-06-25"
     }
   ],
-  "comments": []
+  "comments": [
+    {
+      "id": "8678",
+      "author_id": "001",
+      "post_id": "001",
+      "published_at": "2042-04-23 20:38",
+      "content": "kjb;ekrn"
+    },
+    {
+      "id": "0496",
+      "author_id": "001",
+      "post_id": "001",
+      "published_at": "2060-09-23 07:34",
+      "content": "ksjrga;ore"
+    },
+    {
+      "id": "c346",
+      "author_id": "001",
+      "post_id": "001",
+      "published_at": "2034-03-25 21:39",
+      "content": "ksjrga;ore"
+    },
+    {
+      "id": "f8f3",
+      "author_id": "001",
+      "post_id": "001",
+      "published_at": "2057-04-11 18:14",
+      "content": "ksjrga;ore"
+    },
+    {
+      "id": "bf32",
+      "author_id": "001",
+      "post_id": "001",
+      "published_at": "2046-11-14 19:51",
+      "content": "ksjrga;ore"
+    },
+    {
+      "id": "a018",
+      "author_id": "001",
+      "post_id": "001",
+      "published_at": "2063-12-11 22:08",
+      "content": "комментарий"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "4092",
+      "hash": "0.49512184996323116425998023260035552084445953369141",
+      "user": {
+        "id": "c3b3",
+        "login": "katya",
+        "password": "qwerty123",
+        "registed_at": "2043-11-14 08:18",
+        "role_id": 2
+      }
+    },
+    {
+      "id": "68ef",
+      "hash": "0.72889705371756907670288683220860548317432403564453",
+      "user": {
+        "id": "001",
+        "login": "anton",
+        "password": "qwerty123",
+        "registeredAt": "2050-09-22",
+        "roleId": 0
+      }
+    }
+  ]
 }
