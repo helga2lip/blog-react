@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
-import { Header, Footer } from './components'
+import { Header, Footer, Modal } from './components'
 import { Authorization, Registration, Users, Post } from './pages'
 import styled from 'styled-components'
 import { useDispatch } from 'react-redux'
@@ -53,6 +53,7 @@ export function App() {
           </Routes>
         </Page>
         <Footer />
+        <Modal />
       </Appcolumn>
     </>
   )
