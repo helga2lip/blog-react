@@ -10,5 +10,6 @@ export * from './add-session'
 export * from './delete-session'
 export * from './get-session'
 export * from './get-comments'
+export * from './delete-comment'
 
 
