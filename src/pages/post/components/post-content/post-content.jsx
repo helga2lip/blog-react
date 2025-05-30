@@ -1,27 +1,19 @@
 import { H2, Icon } from '../../../../components'
+import { SpecialPanel } from '../special-panel/special-panel'
 import styled from "styled-components";
 
-const PostContentContainer = ({ className, post: { id, title, imageUrl, content, publishedAt } }) => {
+const PostContentContainer = ({ className, post: { title, imageUrl, content, publishedAt } }) => {
   return (<div className={className}>
     <img src={imageUrl} alt={title} />
     <H2>{title}</H2>
-    <div className="special-panel">
-      <div className="published-at">
-        <Icon
-          id="fa-calendar-o"
-          margin="0 10px 0 0"
-          onClick={() => { }} />
-        {publishedAt}
-      </div>
-      <div className="buttons"><Icon
+    <SpecialPanel
+      publishedAt={publishedAt}
+      margin="-20px 0 20px"
+      editButton={<Icon
         id="fa-pencil-square-o"
         margin="0 10px 0 0"
-        onClick={() => { }} />
-        <Icon
-          id="fa-trash-o"
-          margin="0 10px 0 0"
-          onClick={() => { }} /></div>
-    </div>
+        onClick={() => { }} />}
+    />
     <div className="post-text">{content}</div>
   </div>)
 };
@@ -33,26 +25,7 @@ margin: 0 24px 10px 0;
 float: left;
 }
 
-& .special-panel {
-margin: -20px 0 20px;
-font-size: 18px;
-display: flex;
-justify-content: space-between;
-}
-
-& .published-at {
-display: flex;
-font-size: 18px;
-}
-
-& i {
-
-position: relative;
-top: -8px;
-}
-
-& .buttons {
-display: flex;
-font-size: 21px;
+& .post-text {
+  white-space: pre-line;
 }
 `;
