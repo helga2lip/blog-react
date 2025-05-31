@@ -25,11 +25,13 @@ const CommentContainer = ({ className, postId, id, author, publishedAt, content 
         <div className="information-panel">
           <div className="author"><Icon
             id="fa-user-circle-o"
+            inactive={true}
             margin="0 10px 0 0"
             size="18px"
             onClick={() => { }} />{author}</div>
           <div className="publishedAt"><Icon
             id="fa-calendar-o"
+            inactive={true}
             margin="0 10px 0 0"
             size="18px"
             onClick={() => { }} />{publishedAt}</div>

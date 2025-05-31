@@ -11,20 +11,27 @@ const PostContainer = ({ className }) => {
   const post = useSelector(selectPost);
   const dispatch = useDispatch();
   const isEditing = useMatch('/post/:id/edit');
+  const isCreating = useMatch('/post');
   const params = useParams();
   const requestServer = useServerRequest();
 
   useLayoutEffect(() => {
+
     dispatch(RESET_POST_DATA);
   }, [dispatch]);
 
   useEffect(() => {
+
+    if (isCreating) {
+      return;
+    }
+
     dispatch(loadPostAsync(requestServer, params.id));
-  }, [dispatch, requestServer, params.id]);
+  }, [dispatch, requestServer, params.id, isCreating]);
 
   return (
     <div className={className}>
-      {isEditing ? (
+      {isCreating || isEditing ? (
         <PostForm post={post} />
       ) : (
         <>

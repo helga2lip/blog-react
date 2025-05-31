@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-const IconContainer = ({ className, id, onClick, ...props }) => (
-  <div className={className} onClick={onClick} {...props}>
+const IconContainer = ({ className, id, inactive, ...props }) => (
+  <div className={className} {...props}>
     <i className={`fa ${id}`} aria-hidden="true" />
   </div>
 );
@@ -12,6 +12,6 @@ font-size: ${({ size = '24px' }) => size};
 color: ${({ disabled }) => disabled ? '#cccccc' : '#000000'};
 
 &:hover {
-cursor: ${({ onClick }) => onClick ? 'pointer' : 'default'};
+cursor: ${({ inactive }) => inactive ? 'default' : 'pointer'};
 }
 `;

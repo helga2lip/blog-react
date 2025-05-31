@@ -63,6 +63,8 @@ float: left;
 }
 
 & .post-text {
+  min-height: 80px;
+  border: 1px solid #000000;
   white-space: pre-line;
 }
 `;
