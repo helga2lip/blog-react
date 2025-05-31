@@ -36,6 +36,7 @@ const PostFormContainer = ({ className, post: { id, title, imageUrl, content, pu
     <Input defaultValue={imageUrl} placeholder="Изображение..." ref={imageRef} />
     <Input defaultValue={title} placeholder="Заголовок..." ref={titleRef} />
     <SpecialPanel
+      id={id}
       publishedAt={publishedAt}
       margin="20px 0"
       editButton={<Icon
