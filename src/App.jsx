@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import { Header, Footer, Modal } from './components'
-import { Authorization, Registration, Users, Post } from './pages'
+import { Authorization, Registration, Users, Post, Main } from './pages'
 import styled from 'styled-components'
 import { useDispatch } from 'react-redux'
 import { setUser } from './actions'
@@ -43,7 +43,7 @@ export function App() {
         <div>Hello</div>
         <Page>
           <Routes>
-            <Route path="/" element={<div>Главная страница</div>} />
+            <Route path="/" element={<div>{<Main />}</div>} />
             <Route path="/login" element={<Authorization />} />
             <Route path="/register" element={<Registration />} />
             <Route path="/users" element={<Users />} />
