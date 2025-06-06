@@ -17,8 +17,7 @@ const MainContainer = ({ className }) => {
 
     requestServer('fetchPosts', searchPhraase, page, PAGINATION_LIMIT).then(({ response: { posts, links } }) => {
       setPosts(posts);
-      console.log('links', links)
-      console.log(getLastPageFromLinks(links))
+
       setLastPage(getLastPageFromLinks(links));
     });
   }, [requestServer, page, shouldSearch]);

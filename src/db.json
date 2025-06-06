@@ -15,39 +15,11 @@
       "role_id": 1
     },
     {
-      "id": "1211",
-      "login": "vasya",
+      "login": "tom",
       "password": "qwerty123",
-      "registered_at": "2062-06-07 15:39",
-      "role_id": 2
-    },
-    {
-      "id": "fb83",
-      "login": "ivan2",
-      "password": "qwerty123",
-      "registed_at": "2059-10-16 21:33",
-      "role_id": 2
-    },
-    {
-      "id": "bb02",
-      "login": "ivan3",
-      "password": "qwerty123",
-      "registed_at": "2046-06-18 01:04",
-      "role_id": 2
-    },
-    {
-      "id": "925f",
-      "login": "petya1",
-      "password": "qwerty123",
-      "registed_at": "2034-12-07 11:23",
-      "role_id": 2
-    },
-    {
-      "id": "c3b3",
-      "login": "katya",
-      "password": "qwerty123",
-      "registed_at": "2043-11-14 08:18",
-      "role_id": 2
+      "registed_at": "2043-05-04 10:03",
+      "role_id": 2,
+      "id": "4YO4LmI"
     }
   ],
   "roles": [
@@ -248,15 +220,26 @@
       }
     },
     {
-      "id": "eb53",
-      "hash": "0.37751391080629170815541328920517116785049438476563",
+      "hash": "0.90714548987489618259161261448753066360950469970703",
+      "user": {
+        "login": "tom",
+        "password": "qwerty123",
+        "registed_at": "2043-05-04 10:03",
+        "role_id": 2,
+        "id": "4YO4LmI"
+      },
+      "id": "0QrRX2N"
+    },
+    {
+      "hash": "0.32362047171331953521189461753237992525100708007813",
       "user": {
         "id": "001",
         "login": "anton",
         "password": "qwerty123",
         "registeredAt": "2050-09-22",
         "roleId": 0
-      }
+      },
+      "id": "6acOYIi"
     }
   ]
 }

@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
-import { Header, Footer, Modal } from './components'
+import { Header, Footer, Modal, Error } from './components'
 import { Authorization, Registration, Users, Post, Main } from './pages'
 import styled from 'styled-components'
 import { useDispatch } from 'react-redux'
@@ -50,7 +50,7 @@ export function App() {
             <Route path="/post" element={<Post />} />
             <Route path="/post/:id" element={<Post />} />
             <Route path="/post/:id/edit" element={<Post />} />
-            <Route path="*" element={<div>Ошибка</div>} />
+            <Route path="*" element={<Error error="Такая страница не существует" />} />
           </Routes>
         </Page>
         <Footer />
