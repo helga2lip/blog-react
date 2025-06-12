@@ -4,16 +4,17 @@ import { useEffect, useLayoutEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useServerRequest } from '../../hooks'
 import { selectPost } from '../../selectors'
-import { Error } from '../../components'
+import { Error, PrivateContent } from '../../components'
 import styled from "styled-components";
 import { loadPostAsync, RESET_POST_DATA } from '../../actions';
+import { ROLE } from '../../constants';
 
 const PostContainer = ({ className }) => {
-  const [error, setError] = useState(true);
+  const [error, setError] = useState(null);
   const post = useSelector(selectPost);
   const dispatch = useDispatch();
-  const isEditing = useMatch('/post/:id/edit');
-  const isCreating = useMatch('/post');
+  const isEditing = !!useMatch('/post/:id/edit');
+  const isCreating = !!useMatch('/post');
   const [isLoading, setIsLoading] = useState(true);
   const params = useParams();
   const requestServer = useServerRequest();
@@ -41,23 +42,24 @@ const PostContainer = ({ className }) => {
     return null;
   }
 
+  const SpecificPostPage = isCreating || isEditing ? (
+    <PrivateContent access={[ROLE.ADMIN]} serverError={error}>
+      <div className={className} >
+        <PostForm post={post} />
+      </div>
+    </PrivateContent>
+
+  ) : (
+    <div className={className} >
+      <PostContent post={post} />
+      <Comments comments={post.comments} postId={post.id} />
+    </div>
+  )
+
   return (
     error
       ? <Error error={error} />
-      :
-      (<div className={className} >
-        {isCreating || isEditing ? (
-          <PostForm post={post} />
-        ) : (
-          <>
-            <PostContent post={post} />
-            <Comments comments={post.comments} postId={post.id} />
-          </>
-        )
-        }
-      </div >)
-
-
+      : SpecificPostPage
   );
 };
 
