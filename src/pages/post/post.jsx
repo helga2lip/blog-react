@@ -12,6 +12,7 @@ import { ROLE } from '../../constants';
 const PostContainer = ({ className }) => {
   const [error, setError] = useState(null);
   const post = useSelector(selectPost);
+
   const dispatch = useDispatch();
   const isEditing = !!useMatch('/post/:id/edit');
   const isCreating = !!useMatch('/post');

@@ -20,6 +20,13 @@
       "registed_at": "2043-05-04 10:03",
       "role_id": 2,
       "id": "4YO4LmI"
+    },
+    {
+      "login": "katya",
+      "password": "qwerty123",
+      "registed_at": "2053-04-11 21:07",
+      "role_id": 2,
+      "id": "KjEltg4"
     }
   ],
   "roles": [
@@ -142,13 +149,6 @@
       "content": "классно!"
     },
     {
-      "id": "e12e",
-      "author_id": "001",
-      "post_id": "003",
-      "published_at": "2035-04-14 15:55",
-      "content": "супер!"
-    },
-    {
       "id": "097e",
       "author_id": "001",
       "post_id": "002",
@@ -161,6 +161,48 @@
       "post_id": "004",
       "published_at": "2039-10-14 21:48",
       "content": "хелоу"
+    },
+    {
+      "author_id": "KjEltg4",
+      "post_id": "41df",
+      "published_at": "2040-08-14 07:02",
+      "content": "первый коммент",
+      "id": "HYtDqy8"
+    },
+    {
+      "author_id": "KjEltg4",
+      "post_id": "41df",
+      "published_at": "2038-06-26 17:55",
+      "content": "lsihsre",
+      "id": "sPPsfFu"
+    },
+    {
+      "author_id": "KjEltg4",
+      "post_id": "004",
+      "published_at": "2046-01-16 08:40",
+      "content": "комментарий",
+      "id": "HqE0hVS"
+    },
+    {
+      "author_id": "1da5",
+      "post_id": "003",
+      "published_at": "2058-12-09 11:55",
+      "content": "другой комментарий",
+      "id": "MGl-IFZ"
+    },
+    {
+      "author_id": "KjEltg4",
+      "post_id": "003",
+      "published_at": "2063-10-25 22:13",
+      "content": "one more comment",
+      "id": "c_F97Nh"
+    },
+    {
+      "author_id": "001",
+      "post_id": "004",
+      "published_at": "2046-03-16 13:32",
+      "content": "perfect comment",
+      "id": "kNBYcd9"
     }
   ],
   "sessions": [
@@ -231,7 +273,18 @@
       "id": "0QrRX2N"
     },
     {
-      "hash": "0.73924616540132981334920714289182797074317932128906",
+      "hash": "0.69413288485879487410556976101361215114593505859375",
+      "user": {
+        "login": "katya",
+        "password": "qwerty123",
+        "registed_at": "2053-04-11 21:07",
+        "role_id": 2,
+        "id": "KjEltg4"
+      },
+      "id": "kMaeD7Z"
+    },
+    {
+      "hash": "0.88122515482230090455573190411087125539779663085938",
       "user": {
         "id": "001",
         "login": "anton",
@@ -239,7 +292,7 @@
         "registeredAt": "2050-09-22",
         "roleId": 0
       },
-      "id": "woDEiEi"
+      "id": "PzmaqEf"
     }
   ]
 }
