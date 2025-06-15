@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const IconContainer = ({ className, id, inactive, ...props }) => (
   <div className={className} {...props}>
@@ -15,3 +16,8 @@ color: ${({ disabled }) => disabled ? '#cccccc' : '#000000'};
 cursor: ${({ inactive }) => inactive ? 'default' : 'pointer'};
 }
 `;
+
+Icon.propTypes = {
+  id: PropTypes.string.isRequired,
+  inactive: PropTypes.bool,
+}

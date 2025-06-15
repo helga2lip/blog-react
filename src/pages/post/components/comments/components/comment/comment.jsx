@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { openModal, CLOSE_MODAL, removeCommentAsync } from "../../../../../../actions";
 import { useServerRequest } from "../../../../../../hooks";
 import { selectUserRole } from "../../../../../../selectors";
+import PropTypes from "prop-types";
 import { ROLE } from "../../../../../../constants";
 
 const CommentContainer = ({ className, postId, id, author, publishedAt, content }) => {
@@ -73,3 +74,11 @@ display: flex;
 display: flex;
 }
 `;
+
+Comment.propTypes = {
+  postId: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  publishedAt: PropTypes.string.isRequired,
+}

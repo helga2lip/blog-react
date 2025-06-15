@@ -6,6 +6,7 @@ import { Icon } from "../../../../components";
 import { checkAccess } from '../../../../utils'
 import { ROLE } from '../../../../constants'
 import { selectUserRole } from '../../../../selectors'
+import PropTypes from "prop-types";
 import { useServerRequest } from "../../../../hooks";
 
 const SpecialPanelContainer = ({ className, id, publishedAt, editButton }) => {
@@ -70,3 +71,9 @@ display: flex;
 font-size: 18px;
 }
 `;
+
+SpecialPanel.propTypes = {
+  id: PropTypes.string.isRequired,
+  publishedAt: PropTypes.string.isRequired,
+  editButton: PropTypes.node.isRequired,
+}

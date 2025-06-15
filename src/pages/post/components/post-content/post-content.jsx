@@ -2,6 +2,7 @@ import { H2, Icon } from '../../../../components'
 import { SpecialPanel } from '../special-panel/special-panel'
 import { useNavigate } from 'react-router-dom'
 import styled from "styled-components";
+import { PROP_TYPE } from '../../../../constants';
 
 const PostContentContainer = ({ className, post: { id, title, imageUrl, content, publishedAt } }) => {
   const navigate = useNavigate();
@@ -33,3 +34,7 @@ float: left;
   white-space: pre-line;
 }
 `;
+
+PostContent.propTypes = {
+  post: PROP_TYPE.POST.isRequired,
+}

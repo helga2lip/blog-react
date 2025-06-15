@@ -2,7 +2,9 @@ import { Icon } from "../../../../components";
 import { TableRow } from '../table-row/table-row'
 import { useServerRequest } from '../../../../hooks'
 import styled from "styled-components";
+import PropTypes from "prop-types";
 import { useState } from "react";
+import { PROP_TYPE } from "../../../../constants";
 
 const UserRowContainer = ({ className, login, id, registeredAt, roleId, roles, onUserRemove, }) => {
   const [selectedRoleId, setSelectedRoleId] = useState(roleId);
@@ -56,3 +58,12 @@ padding: 0 5px;
 font-size: 16px;
 }
 `;
+
+UserRow.propTypes = {
+  id: PropTypes.string.isRequired,
+  login: PropTypes.string.isRequired,
+  registeredAt: PropTypes.string.isRequired,
+  roleId: PROP_TYPE.ROLE_ID.isRequired,
+  roles: PropTypes.arrayOf(PROP_TYPE.ROLE).isRequired,
+  onUserRemove: PropTypes.func.isRequired,
+}

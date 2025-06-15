@@ -7,6 +7,7 @@ import styled from "styled-components";
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { useServerRequest } from '../../../../hooks'
+import { PROP_TYPE } from '../../../../constants'
 
 const PostFormContainer = ({ className, post: { id, title, imageUrl, content, publishedAt } }) => {
   const [imageUrlValue, setImageUrlValue] = useState(imageUrl);
@@ -74,3 +75,7 @@ float: left;
   white-space: pre-line;
 }
 `;
+
+PostForm.propTypes = {
+  post: PROP_TYPE.POST.isRequired,
+}
