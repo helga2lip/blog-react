@@ -17,16 +17,44 @@
     {
       "login": "tom",
       "password": "qwerty123",
-      "registed_at": "2043-05-04 10:03",
+      "registered_at": "2043-05-04 10:03",
       "role_id": 2,
       "id": "4YO4LmI"
     },
     {
-      "login": "katya",
+      "login": "vasya",
       "password": "qwerty123",
-      "registed_at": "2053-04-11 21:07",
+      "registered_at": "2049-08-12 09:06",
       "role_id": 2,
-      "id": "KjEltg4"
+      "id": "gMal08Q"
+    },
+    {
+      "login": "sveta",
+      "password": "qwerty123",
+      "registered_at": "2052-01-06 03:47",
+      "role_id": 2,
+      "id": "iBE1YAV"
+    },
+    {
+      "login": "dimon",
+      "password": "qwerty123",
+      "registered_at": "2052-07-13 07:38",
+      "role_id": 2,
+      "id": "xvFjtwF"
+    },
+    {
+      "login": "dimon2",
+      "password": "qwerty123",
+      "registered_at": "2041-10-29 19:22",
+      "role_id": 2,
+      "id": "J0Wm6lo"
+    },
+    {
+      "login": "tolya",
+      "password": "qwerty123",
+      "registered_at": "2051-11-03 01:49",
+      "role_id": 2,
+      "id": "WekK_Lr"
     }
   ],
   "roles": [
@@ -213,7 +241,7 @@
         "id": "c3b3",
         "login": "katya",
         "password": "qwerty123",
-        "registed_at": "2043-11-14 08:18",
+        "registered_at": "2043-11-14 08:18",
         "role_id": 2
       }
     },
@@ -266,7 +294,7 @@
       "user": {
         "login": "tom",
         "password": "qwerty123",
-        "registed_at": "2043-05-04 10:03",
+        "registered_at": "2043-05-04 10:03",
         "role_id": 2,
         "id": "4YO4LmI"
       },
@@ -277,11 +305,33 @@
       "user": {
         "login": "katya",
         "password": "qwerty123",
-        "registed_at": "2053-04-11 21:07",
+        "registered_at": "2053-04-11 21:07",
         "role_id": 2,
         "id": "KjEltg4"
       },
       "id": "kMaeD7Z"
+    },
+    {
+      "hash": "0.83663907312702212593080730584915727376937866210938",
+      "user": {
+        "login": "sveta",
+        "password": "qwerty123",
+        "registered_at": "2052-01-06 03:47",
+        "role_id": 2,
+        "id": "iBE1YAV"
+      },
+      "id": "JRD8I8h"
+    },
+    {
+      "hash": "0.23401895813065876073011395419598557054996490478516",
+      "user": {
+        "login": "tolya",
+        "password": "qwerty123",
+        "registered_at": "2051-11-03 01:49",
+        "role_id": 2,
+        "id": "WekK_Lr"
+      },
+      "id": "BL_5Jgw"
     }
   ]
 }
